@@ -1,0 +1,185 @@
+﻿@{ ViewBag.Title = "login"; Layout = ""; }
+
+
+<!DOCTYPE html>
+<html lang="it" id="demo" style="--primary005: rgba(98, 89, 202, 0.05); --primary02: rgba(98, 89, 202, 0.2); --primary03: rgba(98, 89, 202, 0.3); --primary05: rgba(98, 89, 202, 0.5); --primary07: rgba(98, 89, 202, 0.7); --primary08: rgba(98, 89, 202, 0.8); --primary01: rgba(98, 89, 202, 0.1);">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="app">
+	<meta name="author" content="app">
+	<meta http-equiv="imagetoolbar" content="no">
+	<!-- Title -->
+	<title>app - @ViewData["Title"]</title>
+	<!-- Favicon -->
+	<link rel="icon" href="https://www.spruko.com/demo/spruha/dist/assets/images/brand-logos/favicon.ico" sizes="32x32">
+	<!-- Bootstrap css-->
+	<link id="style" href="~/spruha/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true">
+	<!-- Icons css-->
+	<link href="~/spruha/plugins/web-fonts/icons.css" rel="stylesheet">
+	<link href="~/spruha/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+	<link href="~/spruha/plugins/web-fonts/plugin.css" rel="stylesheet" asp-append-version="true">
+	<!-- Style css-->
+	<link href="~/spruha/css/style.css" rel="stylesheet" asp-append-version="true">
+	<!-- Select2 css-->
+	<link href="~/spruha/plugins/select2/css/select2.min.css" rel="stylesheet" asp-append-version="true">
+	<!-- Switcher css-->
+	<link href="~/spruha/switcher/css/switcher.css" rel="stylesheet" asp-append-version="true">
+	<link href="~/spruha/switcher/css/demo.css" rel="stylesheet" asp-append-version="true">
+
+    <style>.fa-microsoft:hover { color: var(--primary-bg-hover)}</style>
+</head>
+
+<body class="ltr main-body leftmenu error-1 dark-theme">
+	<!-- Switcher -->
+	<div class="switcher-wrapper">
+		<div class="demo_changer">
+			<div class="form_holder sidebar-right1 ps">
+				<div class="row">
+					<div class="predefined_styles">
+						<div class="swichermainleft">
+							<h4>Tema Light</h4>
+							<div class="skin-body">
+								<div class="switch_section">
+									<div class="switch-toggle d-flex">
+										<span class="me-auto">Light</span>
+										<p class="onoffswitch2"><input type="radio" name="onoffswitch1" id="myonoffswitch1" class="onoffswitch2-checkbox"> <label for="myonoffswitch1" class="onoffswitch2-label"></label> </p>
+									</div>
+									<div class="switch-toggle d-flex mt-2">
+										<span class="me-auto">Light (Personalizzato)</span>
+										<div class=""> <input class="wd-30 ht-30 input-color-picker color-primary-light" value="#961f1d" id="colorID" oninput="changePrimaryColor()" type="color" data-id="bg-color" data-id1="bg-hover" data-id2="bg-border" data-id7="transparentcolor" name="lightPrimary"> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swichermainleft">
+							<h4>Tema Dark</h4>
+							<div class="skin-body">
+								<div class="switch_section">
+									<div class="switch-toggle d-flex">
+										<span class="me-auto">Dark</span>
+										<p class="onoffswitch2"><input type="radio" name="onoffswitch1" id="myonoffswitch2" class="onoffswitch2-checkbox" checked=""> <label for="myonoffswitch2" class="onoffswitch2-label"></label> </p>
+									</div>
+									<div class="switch-toggle d-flex mt-2">
+										<span class="me-auto">Dark (Personalizzato)</span>
+										<div class=""> <input class="wd-30 ht-30 input-dark-color-picker color-primary-dark" value="#961f1d" id="darkPrimaryColorID" oninput="darkPrimaryColor()" type="color" data-id="bg-color" data-id1="bg-hover" data-id2="bg-border" data-id3="primary" data-id8="transparentcolor" name="darkPrimary"> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swichermainleft layout-width-style">
+							<h4>Dimensioni Layout</h4>
+							<div class="skin-body">
+								<div class="switch_section">
+									<div class="switch-toggle d-flex">
+										<span class="me-auto">Full Screen</span>
+										<p class="onoffswitch2"><input type="radio" name="onoffswitch4" id="myonoffswitch9" class="onoffswitch2-checkbox" checked=""> <label for="myonoffswitch9" class="onoffswitch2-label"></label> </p>
+									</div>
+									<div class="switch-toggle d-flex mt-2">
+										<span class="me-auto">Ridotto</span>
+										<p class="onoffswitch2"><input type="radio" name="onoffswitch4" id="myonoffswitch10" class="onoffswitch2-checkbox"> <label for="myonoffswitch10" class="onoffswitch2-label"></label> </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swichermainleft">
+							<h4>Ripristina Tutti Gli Stili</h4>
+							<div class="skin-body">
+								<div class="switch_section my-4">
+									<button class="btn btn-danger btn-block" onclick="localStorage.clear();
+                                        document.querySelector('html').style = '';
+                                        names() ;
+                                        resetData();" type="button">
+										Resetta Tutto
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ps__rail-x" style="left: 0px; top: 0px;">
+					<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+				</div>
+				<div class="ps__rail-y" style="top: 0px; right: 0px;">
+					<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Switcher -->
+
+	<!-- Loader -->
+	<div id="global-loader"> <img src="~/spruha/img/loader.svg" class="loader-img" alt="Loader"> </div>
+	<!-- End Loader -->
+
+	<!-- Page -->
+    <div class="page main-signin-wrapper">
+        @*<div class="d-flex header-setting-icon demo-icon fa-spin"> <a class="nav-link icon" href="javascript:void(0)"> <i class="fe fe-settings settings-icon "></i> </a> </div>*@
+        <!-- Row -->
+        <div class="row signpages text-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row row-sm">
+                        <div class="col-lg-6 col-xl-5 d-none d-lg-block text-center bg-primary details">
+                            <div class="mt-5 pt-4 p-2 pos-absolute">
+                                <div class="clearfix"></div>
+                                <img src="" class="ht-100 mb-0" alt="Logo">
+                                <h5 class="mt-4 text-white"></h5>
+                                <span class="tx-white-6 tx-13 mb-5 mt-xl-0">Cosa aspetti? accedi, connettiti, ed inzia ad usare il gestionale</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-7 col-xs-12 col-sm-12 login_form ">
+                            <div class="main-container container-fluid">
+                                <div class="row row-sm">
+                                    <div class="card-body mt-2 mb-2">
+                                        <img src="" class="d-lg-none header-brand-img text-start float-start mb-4 error-logo-light ht-50" alt="Logo">
+                                        <div class="clearfix"></div>
+                                        <form>
+                                            <h5 class="text-start mb-2" style="color:#ffffff">Accedi al tuo account</h5>
+                                            <p class="mb-4 text-muted tx-13 ms-0 text-start">Cosa aspetti? accedi, connettiti, ed inzia ad usare il gestionale</p>
+                                            <div style="margin-top:10rem"></div>
+                                            <a class="btn ripple btn-main-primary btn-block" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" style="width: 6%; height: auto;" />
+                                            </a>
+                                        </form>
+                                        <div class="text-start mt-5 ms-0">
+                                            <div class="mb-1"></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Row -->
+    </div>
+	<!-- End Page -->
+
+
+	<!-- Jquery js -->
+	<script src="~/spruha/plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap js -->
+	<script src="~/spruha/plugins/bootstrap/js/popper.min.js"></script>
+	<script src="~/spruha/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+	<!--  Select2 js -->
+	<script src="~/spruha/plugins/select2/js/select2.min.js"></script>
+	<script src="~/spruha/js/select2.js"></script>
+	<!--  Perfect-scrollbar js -->
+	<script src="~/spruha/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<!--  Color Theme js -->
+	<script src="~/spruha/js/themeColors.js"></script>
+	<!--  Custom js -->
+	<script src="~/spruha/js/custom.js"></script>
+	<!--  Switcher js -->
+	<script src="~/spruha/switcher/js/switcher.js"></script>
+
+	<div class="main-navbar-backdrop"></div>
+</body>
+
+</html>

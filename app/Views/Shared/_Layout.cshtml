@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="it" id="demo" style="--primary005: rgba(98, 89, 202, 0.05); --primary02: rgba(98, 89, 202, 0.2); --primary03: rgba(98, 89, 202, 0.3); --primary05: rgba(98, 89, 202, 0.5); --primary07: rgba(98, 89, 202, 0.7); --primary08: rgba(98, 89, 202, 0.8); --primary01: rgba(98, 89, 202, 0.1);">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="app">
+	<meta name="author" content="app">
+	<meta http-equiv="imagetoolbar" content="no">
+	<!--Title-->
+	<title>app - @ViewData["Title"]</title>
+	<!-- Favicon -->
+	<link rel="icon" href="https://www.spruko.com/demo/spruha/dist/assets/images/brand-logos/favicon.ico" sizes="32x32">
+	<!--Choices js-->
+	<script src="https://www.spruko.com/demo/spruha/dist/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+	<!--Bootstrap css-->
+	<link id="style" href="https://www.spruko.com/demo/spruha/dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true">
+	<!--Icons css-->
+	<link href="~/spruha/plugins/web-fonts/icons.css" rel="stylesheet">
+	<link href="~/spruha/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+	<link href="~/spruha/plugins/web-fonts/plugin.css" rel="stylesheet" asp-append-version="true">
+	<!--Style css-->
+	<link href="~/spruha/css/style.css" rel="stylesheet" asp-append-version="true">
+	<!--Color Picker css-->
+	<link href="https://www.spruko.com/demo/spruha/dist/assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" asp-append-version="true">
+	<link href="~/spruha/plugins/simonwep/css/nano.min.css" rel="stylesheet" asp-append-version="true">
+	<!--Choices css-->
+	<link href="https://www.spruko.com/demo/spruha/dist/assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" asp-append-version="true">
+	<link href="https://www.spruko.com/demo/spruha/dist/assets/libs/quill/quill.snow.css" rel="stylesheet" asp-append-version="true">
+	<link href="https://www.spruko.com/demo/spruha/dist/assets/libs/quill/quill.bubble.css" asp-append-version="true">
+	<!--Switcher css-->
+	<link href="~/spruha/switcher/css/switcher.css" rel="stylesheet" asp-append-version="true">
+	<link href="~/spruha/switcher/css/demo.css" rel="stylesheet" asp-append-version="true">
+	<!-- Google maps -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" />
+	<!--dataTables-->
+	<link rel="stylesheet" href="~/dataTables/dataTables/css/dataTables.bootstrap5.min.css" asp-append-version="true">
+	<!--Editor Bootstrap 5-->
+	<link rel="stylesheet" href="~/dataTables/editor/css/editor.bootstrap5.min.css" asp-append-version="true">
+	<!--FixedHeader DataTables-->
+	<link rel="stylesheet" href="~/dataTables/fixedHeader/css/fixedHeader.dataTables.min.css" asp-append-version="true">
+	<!--Responsive DataTables-->
+	<link rel="stylesheet" href="~/dataTables/responsive/css/responsive.dataTables.min.css" asp-append-version="true">
+	<!--Buttons Bootstrap 5-->
+	<link rel="stylesheet" href="~/dataTables/buttons/css/buttons.bootstrap5.min.css" asp-append-version="true">
+	<!--Select-->
+	<link rel="stylesheet" href="~/dataTables/select/css/select.bootstrap5.min.css" asp-append-version="true">
+	<!--DataTables Select2-->
+	<link rel="stylesheet" href="~/dataTables/select2/css/select2.min.css" asp-append-version="true">
+	<!--SearchPane-->
+	<link rel="stylesheet" href="~/dataTables/searchPanes/css/searchPanes.dataTables.min.css" asp-append-version="true">
+	<!--DateTimne-->
+	<link rel="stylesheet" href="~/dataTables/datetime/css/dataTables.dateTime.min.css" asp-append-version="true">
+	<!--Animate-->
+	<link rel="stylesheet" href="~/dataTables/sweetalert/css/animate.min.css" asp-append-version="true">
+
+	<!--Jquery js-->
+	<script src="~/spruha/plugins/jquery/jquery.min.js"></script>
+	<style> body { overflow-y: auto; } div:where(.swal2-container) div:where(.swal2-popup) { font-size: .8rem !important; } .swal2-confirm { background-color:#961f1d !important } .swal2-cancel { background-color: #222222D4 !important } .swal2-container { z-index: 20000 !important; } .DTE_Header_Content { font-weight: bold;font-size: 1.2rem; } .generatePassword { float: right; margin-right: 6px; margin-top: -29px; position: relative; z-index: 2; color: #000000 !important; } .generatePassword:hover { color: #A42B2C !important} .dataTables_processing { z-index: 9998 !important; } .colored-toast.swal2-icon-success{background-color:#a5dc86!important}.colored-toast.swal2-icon-error{background-color:#f27474!important}.colored-toast.swal2-icon-warning{background-color:#f8bb86!important}.colored-toast.swal2-icon-info{background-color:#3fc3ee!important}.colored-toast.swal2-icon-question{background-color:#87adbd!important}.colored-toast .swal2-close,.colored-toast .swal2-html-container,.colored-toast .swal2-title{color:#fff} .select2-container--default .select2-selection--single { border: 1px solid #e8e8f7; } .select2-container .select2-selection--single { height: 38px; } .select2-container--default .select2-selection--single .select2-selection__rendered { color: #a8afc7; line-height: 37px; } .select2-container--default .select2-selection--single .select2-selection__arrow { height: 37px; } .page-link { color: #961f1d; } .page-link:hover { z-index: 2; color: #A42B2C;} table.dataTable > tbody > tr.child ul.dtr-details { display: block; } .select2-container--default.select2-container--focus .select2-selection--multiple { border: 1px solid #e8e8f7; outline: none; } .select2-container--default .select2-selection--multiple { border: 1px solid #e8e8f7; } .select2-search--inline { display: contents; } .select2-search__field:placeholder-shown { width: 100% !important; } .select2-container--default .select2-selection--multiple .select2-selection__choice { line-height: 1.35; } div.dt-datetime table td.selectable button:hover { background: #961f1d; color: white; border-radius: 2px; } .vtimeline { margin-bottom: 0px; } .dropdown-menu { overflow: auto; max-height: 300px !important; } .ql-container { min-height: 500px; } table.dataTable > tbody > tr.selected a { color: #fff; } .fa-hover { color: #961f1d; cursor: pointer } .fa-hover:hover { color: #dc3545; } .dataTables_scrollHeadInner { width:100% !important } .select2-container .select2-selection--multiple .select2-selection__rendered { display: grid !important; overflow: hidden; padding-left: 8px; text-overflow: ellipsis; white-space: nowrap; } .select2-container--default .select2-search--inline .select2-search__field { margin-top: 1px; line-height: 36px;padding-left: 7px; opacity: 1; } .mr-2 { margin-right: 2px !important } .select2-container--default .select2-selection--multiple .select2-selection__choice__remove { top: 6px; } .select2-container--default .select2-selection--multiple .select2-selection__choice { line-height: 2; } .text-wrap { white-space: normal !important; } .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus { background: #474747 !important; color: #ffffff !important } .bg-gray-300 { background-color: #961f1d; } .nav-tabs .nav-link { color: #FFF; } .nav-tabs .nav-link.active { background-color: #474747; color: #FFF; } .select2-container--default .select2-results__option--highlighted[aria-selected] { background-color: #961f1d !important; } .form-control::file-selector-button { padding: 0.575rem .75rem !important; margin: -.875rem -.75rem !important; margin-right: .75rem !important } .pac-container { z-index: 9999; } </style>
+</head>
+
+<body class="ltr main-body leftmenu main-sidebar-hide">
+	<div class="horizontalMenucontainer">
+		<!--Loader-->
+		<div id="global-loader"> <img src="~/spruha/img/loader.svg" class="loader-img" alt="Loader"> </div>
+		<!--End Loader-->
+		<!--Page-->
+		<div class="page">
+			<!--Navbar-->
+			<partial name="_Navbar" />
+			<!--End Navbar-->
+
+			<!--Sidebar-->
+			<partial name="_Sidebar" />
+			<!--End Sidebar-->
+
+			<!--Main Content-->
+			<div class="main-content side-content pt-0">
+				<div class="main-container container-fluid">
+					<div class="inner-body"> @RenderBody() </div>
+				</div>
+			</div>
+			<!--End Main Content-->
+
+			<!--Footer-->
+			<partial name="_Footer" />
+			<!--End Footer-->
+		</div>
+		<!--End Page-->
+
+		<!--Back-to-top-->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+
+		<!-- Bootstrap js-->
+		<script src="~/spruha/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="https://www.spruko.com/demo/spruha/dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!--Color Picker js-->
+		<script src="~/spruha/plugins/pickr/js/pickr.es5.min.js"></script>
+		<!-- Sidebar js-->
+		<script src="~/spruha/plugins/sidebar/sidebar.js"></script>
+		<!-- Color Theme js-->
+		<script src="~/spruha/js/themeColors.js"></script>
+		<!-- Sticky js-->
+		<script src="~/spruha/js/sticky.js"></script>
+		<!-- Custom js-->
+		<script src="~/spruha/js/custom.js"></script>
+		<!-- Jszip -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+		<!--Datatables --->
+		<!--Jquery dataTables-->
+		<script src="~/dataTables/dataTables/js/jquery.dataTables.min.js"></script>
+		<!--datatables SearchPane-->
+		<script src="~/dataTables/searchPanes/js/searchPanes.dataTables.min.js"></script>
+		<!--datatables Select -->
+		<script src="~/dataTables/select/js/dataTables.select.min.js"></script>
+		<!--dataTables Buttons-->
+		<script src="~/dataTables/buttons/js/dataTables.buttons.min.js"></script>
+		<!--dataTables Colvis-->
+		<script src="~/dataTables/colvis/js/colvis.min.js"></script>
+		<!--dataTables Bootstrap 5-->
+		<script src="~/dataTables/dataTables/js/dataTables.bootstrap5.min.js"></script>
+		<!--FixedHeader DataTables-->
+		<script src="~/dataTables/fixedHeader/js/dataTables.fixedHeader.min.js"></script>
+		<!--dataTables Responsive-->
+		<script src="~/dataTables/responsive/js/dataTables.responsive.min.js"></script>
+		<!--Buttons Bootstrap 5-->
+		<script src="~/dataTables/buttons/js/buttons.bootstrap5.min.js"></script>
+		<!--Moment-->
+		<script src="~/dataTables/moment/js/moment.min.js"></script>
+		<script src="~/dataTables/moment/js/datetime-moment.min.js"></script>
+		<!--dataTables dateTime-->
+		<script src="~/dataTables/datetime/js/dataTables.dateTime.min.js"></script>
+		<!--dataTables Editor-->
+		<script src="~/dataTables/editor/js/dataTables.editor.min.js"></script>
+		<!--Editor Bootstrap 5-->
+		<script src="~/dataTables/editor/js/editor.bootstrap5.min.js"></script>
+		<!--Datatables Select 2-->
+		<script src="~/dataTables/select2/js/select2.min.js"></script>
+		<!--Editor Select 2-->
+		<script src="~/dataTables/select2/js/editor.select2.min.js"></script>
+		<!--Jszip-->
+		<script src="~/dataTables/pdf/js/jszip.min.js"></script>
+		<!--Pdfmake-->
+		<script src="~/dataTables/pdf/js/pdfmake.min.js"></script>
+		<!--Vfs_fonts-->
+		<script src="~/dataTables/pdf/js/vfs_fonts.min.js"></script>
+		<!--Buttons Print-->
+		<script src="~/dataTables/buttons/js/buttons.print.min.js"></script>
+		<!--Buttons Html5-->
+		<script src="~/dataTables/buttons/js/buttons.html5.min.js"></script>
+		<!--DateTime-->
+		<script src="~/dataTables/datetime/js/dataTables.dateTime.min.js"></script>
+		<!--SweetAlert-->
+		<script src="~/dataTables/sweetalert/js/sweetalert2@11.min.js"></script>
+
+		<!-- Logout -->
+		<script>
+			$(document).ready(function () {
+				/* NON TOCCARE */
+				$(".menu-nav li.nav-item a").click(function () {
+					$('.active').not(this).removeClass('active');
+					$(this).toggleClass('active');
+				});
+				/* NON TOCCARE */
+			});
+
+			function logoutHeader() {
+				var form = this;
+
+				const swalWithBootstrapButtons = Swal.mixin({ buttonsStyling: true })
+
+				swalWithBootstrapButtons.fire({
+					showClass: {
+						popup: "animate__animated animate__fadeInDown"
+					},
+					hideClass: {
+						popup: "animate__animated animate__fadeOutUp"
+					},
+					title: "Attenzione",
+					text: "Stai per essere disconnesso, vuoi procedere?",
+					icon: "warning",
+					showCancelButton: true,
+					allowOutsideClick: false,
+					confirmButtonText: "Torna alla login",
+					cancelButtonText: "Annulla",
+					confirmButtonColor: "#909397",
+					cancelButtonColor: "#e31b16",
+					reverseButtons: false
+				}).then((result) => {
+					if (result.value) {
+						swalWithBootstrapButtons.fire(
+							{
+								title: "Operazione eseguita",
+								showClass: {
+									popup: "animate__animated animate__fadeInDown"
+								},
+								hideClass: {
+									popup: "animate__animated animate__fadeOutUp"
+								},
+								text: "Hai eseguito il logout, sarai reindirizzato alla login.",
+								icon: "success",
+								confirmButtonColor: "#909397",
+								confirmButtonText: "Torna alla login",
+								allowOutsideClick: false,
+							}).then(function () {
+								document.location.href = "/MicrosoftIdentity/Account/SignOut";
+								form.submit();
+							})
+					}
+				})
+			};
+		</script>
+		@RenderSection("Scripts", required: false)
+	</div>
+
+	<div class="main-navbar-backdrop"></div>
+</body>
+
+</html>
